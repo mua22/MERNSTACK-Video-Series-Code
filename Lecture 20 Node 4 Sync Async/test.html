@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script>
+      $(function() {
+        console.log("Sending request");
+        $.get(
+          "https://usman-recipes.herokuapp.com/api/recipes",
+          handleResponse
+        );
+
+        function handleResponse(data) {
+          console.log("response received");
+          console.log(data);
+        }
+        console.log("Sent request");
+      });
+    </script>
+  </head>
+  <body></body>
+</html>
