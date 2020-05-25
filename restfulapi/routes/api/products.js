@@ -33,7 +33,7 @@ router.put("/:id", validateProduct, async (req, res) => {
   return res.send(product);
 });
 //update a record
-router.delete("/:id", auth, admin, async (req, res) => {
+router.delete("/:id", async (req, res) => {
   let product = await Product.findByIdAndDelete(req.params.id);
   return res.send(product);
 });
