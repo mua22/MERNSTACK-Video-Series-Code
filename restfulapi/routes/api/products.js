@@ -11,7 +11,8 @@ router.get("/", async (req, res) => {
   let perPage = Number(req.query.perPage ? req.query.perPage : 10);
   let skipRecords = perPage * (page - 1);
   let products = await Product.find().skip(skipRecords).limit(perPage);
-  return res.send(products);
+  let total = await Product.countDocuments();
+  return res.send({ total, products });
 });
 //get single products
 router.get("/:id", async (req, res) => {
@@ -25,7 +26,7 @@ router.get("/:id", async (req, res) => {
   }
 });
 //update a record
-router.put("/:id", validateProduct, async (req, res) => {
+router.put("/:id", validateProduct, auth, admin, async (req, res) => {
   let product = await Product.findById(req.params.id);
   product.name = req.body.name;
   product.price = req.body.price;
@@ -33,12 +34,12 @@ router.put("/:id", validateProduct, async (req, res) => {
   return res.send(product);
 });
 //update a record
-router.delete("/:id", async (req, res) => {
+router.delete("/:id", auth, admin, async (req, res) => {
   let product = await Product.findByIdAndDelete(req.params.id);
   return res.send(product);
 });
 //Insert a record
-router.post("/", validateProduct, async (req, res) => {
+router.post("/", validateProduct, auth, async (req, res) => {
   let product = new Product();
   product.name = req.body.name;
   product.price = req.body.price;

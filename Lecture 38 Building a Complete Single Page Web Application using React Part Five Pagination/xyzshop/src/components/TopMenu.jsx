@@ -26,11 +26,7 @@ const TopMenu = () => {
             Products
           </Link>
         </Typography>
-        <Typography variant="h6">
-          <Link to="/products/new" className={classes.link}>
-            New Product
-          </Link>
-        </Typography>
+
         <Typography variant="h6">
           <Link to="/contact-us" className={classes.link}>
             Contact Us
