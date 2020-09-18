@@ -1,0 +1,15 @@
+ul {
+  list-style-type: none;
+  background-color: black;
+  padding: 0px;
+  overflow: hidden;
+}
+li {
+  display: inline;
+  background-color: green;
+  padding: 5px;
+  margin: 0px;
+}
+a {
+  color: white;
+}

@@ -1,0 +1,32 @@
+div {
+  /* border: 1px solid red; */
+  margin: 10px;
+}
+#container {
+  margin-left: 50px;
+  margin-right: 50px;
+  overflow: hidden;
+  min-height: 400px;
+}
+#left {
+  width: 20%;
+  float: left;
+  margin: 20px;
+}
+#right {
+  /* background-color: yellow; */
+  float: right;
+  width: 20%;
+  margin: 20px;
+}
+#content {
+  /* background-color: teal; */
+}
+
+#covid {
+  width: 100px;
+  float: right;
+}
+#content p {
+  overflow: hidden;
+}

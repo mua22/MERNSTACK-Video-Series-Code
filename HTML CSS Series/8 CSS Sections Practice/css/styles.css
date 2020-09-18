@@ -1,0 +1,38 @@
+div {
+  border: 1px dashed blue;
+  padding-left: 5px;
+  margin: 3px;
+}
+#first {
+  background-color: lightgray;
+}
+
+.yellowb {
+  background-color: yellow;
+}
+
+#super {
+  text-decoration: underline;
+}
+
+.shout {
+  color: red;
+}
+
+#topMenu li {
+  display: inline;
+}
+
+#topMenu a {
+  color: orange;
+  text-decoration: underline;
+  font-size: 3em;
+}
+#topMenu a:hover {
+  color: red;
+  text-decoration: none;
+  font-size: 3em;
+}
+p::first-letter {
+  font-size: 2em;
+}
