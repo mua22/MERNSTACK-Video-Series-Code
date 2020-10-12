@@ -1,0 +1,11 @@
+#content {
+  min-height: 400px;
+}
+
+#sticky-footer {
+  flex-shrink: none;
+}
+
+tr.even {
+  background-color: aqua;
+}
