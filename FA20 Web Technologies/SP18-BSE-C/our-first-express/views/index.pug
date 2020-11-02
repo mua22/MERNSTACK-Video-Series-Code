@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  form(method="post")
+    input(type="radio",name="gender",checked=male,value="m")
+    span Male
+    input(type="radio",name="gender",checked=!male,value="f")
+    span Female
+    input(type="submit")
