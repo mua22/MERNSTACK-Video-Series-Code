@@ -12,6 +12,7 @@ function sendAjaxRequest() {
 function ajaxCmpleted(result) {
   console.log("Response Received");
   console.log(result);
+  $("#result").html("");
   for (var i = 0; i < result.length; i++) {
     var product = result[i];
     var productStr =
