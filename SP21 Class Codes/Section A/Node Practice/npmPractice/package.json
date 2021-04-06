@@ -1,0 +1,17 @@
+{
+  "name": "usman-sectiona",
+  "version": "2.0.0",
+  "description": "This is a dummy package",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Test"
+  ],
+  "author": "Usman Akram",
+  "license": "ISC",
+  "dependencies": {
+    "underscore": "^1.12.1"
+  }
+}
