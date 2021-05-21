@@ -1,3 +1,4 @@
+import Layout from "./components/layout/Layout";
 import Student from "./components/Student";
 function App() {
   // You can do any thing with js here
@@ -6,11 +7,12 @@ function App() {
   };
   return (
     <div className="container">
-      <h1>Hello B Section</h1>
-      <p>test paragraph</p>
-      <Student name="Kashif" onSubmitAssignment={handleAssignmentSubmission} />
-      <Student name="Noman" onSubmitAssignment={handleAssignmentSubmission} />
-      <Student name="Ali" onSubmitAssignment={handleAssignmentSubmission} />
+      <Layout>
+        <Student
+          name="Kashif"
+          onSubmitAssignment={handleAssignmentSubmission}
+        />
+      </Layout>
     </div>
   );
 }
