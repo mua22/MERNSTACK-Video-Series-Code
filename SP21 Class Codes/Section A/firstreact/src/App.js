@@ -1,28 +1,30 @@
+import Layout from "./components/layout/Layout";
 import User from "./components/User";
-
+import Users from "./components/users/Users";
+import ContactUs from "./components/ContactUs/ContactUs";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import LandingPage from "./components/landingpage/LandingPage";
+import UsersForm from "./components/users/UsersForm";
 function App() {
   return (
-    <div>
-      <h1>Greetings</h1>
-      <p>Hello A Section</p>
-      <User
-        firstName="Usman"
-        email="usman.akram@gmail.com"
-        avatar="https://reqres.in/img/faces/6-image.jpg"
-        showAvatar={true}
-      />
-      <User
-        firstName="Noman"
-        email="noman.akram@gmail.com"
-        avatar="https://reqres.in/img/faces/8-image.jpg"
-      />
-      <User
-        firstName="Haseeb"
-        email="haseeb@gmail.com"
-        avatar="https://reqres.in/img/faces/9-image.jpg"
-        showAvatar={true}
-      />
-    </div>
+    <Router>
+      <Layout>
+        <Switch>
+          <Route path="/contact">
+            <ContactUs />
+          </Route>
+          <Route path="/users/add">
+            <UsersForm />
+          </Route>
+          <Route path="/users">
+            <Users />
+          </Route>
+          <Route path="/">
+            <LandingPage />
+          </Route>
+        </Switch>
+      </Layout>
+    </Router>
   );
 }
 
