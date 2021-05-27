@@ -1,3 +1,4 @@
+import Friends from "./components/friends/Friends";
 import Layout from "./components/layout/Layout";
 import Student from "./components/Student";
 function App() {
@@ -6,14 +7,15 @@ function App() {
     alert(name + " Submitted Assignment");
   };
   return (
-    <div className="container">
+    <>
       <Layout>
-        <Student
+        <Friends />
+        {/* <Student
           name="Kashif"
           onSubmitAssignment={handleAssignmentSubmission}
-        />
+        /> */}
       </Layout>
-    </div>
+    </>
   );
 }
 
