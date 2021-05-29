@@ -2,7 +2,7 @@ import React from "react";
 import MyNavBar from "./MyNavBar";
 
 const Layout = (props) => {
-  console.log(props);
+  // console.log(props);
   return (
     <div id="layout">
       <MyNavBar />

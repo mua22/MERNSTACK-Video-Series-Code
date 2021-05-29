@@ -1,5 +1,7 @@
+import ClickCounter from "./components/ClickCounter";
 import Friends from "./components/friends/Friends";
 import Layout from "./components/layout/Layout";
+import Products from "./components/products/Products";
 import Student from "./components/Student";
 function App() {
   // You can do any thing with js here
@@ -9,7 +11,9 @@ function App() {
   return (
     <>
       <Layout>
-        <Friends />
+        <Products />
+        {/* <ClickCounter /> */}
+        {/* <Friends /> */}
         {/* <Student
           name="Kashif"
           onSubmitAssignment={handleAssignmentSubmission}
