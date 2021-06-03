@@ -23,6 +23,9 @@ const Products = () => {
   return (
     <div className="container">
       <h5>Showing Products {fetching && <span>Loading ...</span>}</h5>
+      <a href="/products/add" className="btn btn-info">
+        Add New Product
+      </a>
       {fetching && <img src="/loader.gif" />}
       {products.map((product, index) => (
         <SingleProduct key={index} product={product} />
